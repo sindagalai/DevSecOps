@@ -1,0 +1,24 @@
+rules:
+  - id: js-eval
+    pattern: eval($X)
+    message: "Usage de eval() - risque d’injection."
+    languages: [js]
+    severity: ERROR
+
+  - id: python-exec
+    pattern: exec($X)
+    message: "Usage de exec() - exécution de code non sécurisée."
+    languages: [python]
+    severity: ERROR
+
+  - id: python-shell-true
+    pattern: subprocess.Popen(..., shell=True)
+    message: "Utilisation de subprocess avec shell=True - risque d’injection de commande."
+    languages: [python]
+    severity: WARNING
+
+  - id: hardcoded-secret
+    pattern: $VAR = "$SECRET"
+    message: "Secret codé en dur détecté (ne pas stocker de mots de passe / clés dans le code)."
+    languages: [python, js]
+    severity: WARNING

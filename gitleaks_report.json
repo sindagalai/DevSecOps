@@ -1,0 +1,42 @@
+[
+ {
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 20,
+  "EndLine": 20,
+  "StartColumn": 6,
+  "EndColumn": 44,
+  "Match": "SECRET_KEY = \"AKIA1234567890EXEMPLECLE\"",
+  "Secret": "AKIA1234567890EXEMPLECLE",
+  "File": "test.py",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 4.0849624,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "RuleID": "generic-api-key",
+  "Fingerprint": "test.py:generic-api-key:20"
+ },
+ {
+  "Description": "Identified a pattern that may indicate AWS credentials, risking unauthorized cloud resource access and data breaches on AWS platforms.",
+  "StartLine": 20,
+  "EndLine": 20,
+  "StartColumn": 20,
+  "EndColumn": 39,
+  "Match": "AKIA1234567890EXEMPL",
+  "Secret": "AKIA1234567890EXEMPL",
+  "File": "test.py",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 4.121928,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "RuleID": "aws-access-token",
+  "Fingerprint": "test.py:aws-access-token:20"
+ }
+]
